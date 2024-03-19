@@ -84,7 +84,7 @@ const Sidebar = () => {
     const toggle=useSelector((state)=>state.app.toggle);
 
     return (
-        <div className={`relative  ${toggle ? "w-[18%]":"w-[6%]"}  py-0 px-5 h-[100vh] ml-3  overflow-y-scroll mt-14`}>
+        <div className={`relative  ${toggle ? "w-[15%]":"w-[6%]"}  py-0 px-5 h-[100vh] ml-3  overflow-y-scroll mt-14`}>
             {
                 sidebarItem.map((item, index) => {
                     return (

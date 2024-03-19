@@ -1,12 +1,13 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Avatar from 'react-avatar'
-import { API_KEY } from '../constants/youtube'
+// import { API_KEY } from '../constants/youtube'
+
 const VideoCart = ({item}) => {
     const[videoIcon,setVideoIcon]=useState('');
     const getChannelAvatar=async()=>{
         try {
-            const res=await axios.get(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${item.snippet.channelId}&key=${API_KEY}`)
+            const res=await axios.get(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${item.snippet.channelId}&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`)
             
             // console.log(res);
             setVideoIcon(res.data.items[0].snippet.thumbnails.default.url)
