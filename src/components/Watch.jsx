@@ -48,7 +48,7 @@ const Watch = () => {
         <iframe
           width="750"
           height="450"
-          src={`https://www.youtube.com/embed/${videoId}?&autoplay=0`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          src={`https://www.youtube.com/embed/${videoId}?&autoplay=1`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen>
         </iframe>
         <h1 className='font-bold mt-2 text-lg'>{singleVideo?.snippet?.title}</h1>
@@ -77,7 +77,7 @@ const Watch = () => {
 
       </div>
 
-      <div className='  w-[30%] mx-4 border px-3 py-2 rounded-lg h-fit  border-gray-300'>
+      <div className='  w-[32%] mx-4 border px-3 py-2 rounded-lg h-fit  border-gray-300'>
         <div className='flex justify-between'>
           <h1>Top chat</h1>
           <BsThreeDotsVertical size={'20px'} />
